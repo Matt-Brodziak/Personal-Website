@@ -1,0 +1,149 @@
+<!DOCTYPE html> 
+<html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatable" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Personal Website - Matt Brodziak</title>
+  <link rel="stylesheet" href="style.css">
+
+
+ </head>
+ <body>
+   <div id="header">
+      <div class="container">
+         <nav>
+            <ul>
+                <li><a href="#">Home</a> </li>
+                <li><a href="#about">About</a> </li>
+                <li><a href="#portfolio">Portfolio</a> </li>
+                <li><a href="#contact">Contact</a> </li>
+            </ul>
+         </nav>
+         <div class="header-text">
+            <p>Matric Student</p>
+            <h1>I am a grade 12 <br>learner from Cape Town</h1>
+         </div>
+      </div>
+   </div>
+
+<!-----------------about------------>
+<div id="about">
+   <div class="container">
+      <div class="row">
+         <div class="about-col-1">
+            <img src="images/me.jpg">
+         </div>
+         <div class="about-col-2">
+            <h1 class="subtitle">About Me</h1>
+            <p>It is a long established fact that a reader will be distracted
+                by the readable content of a page when looking at its layout. The 
+                point of using Lorem Ipsum is that it has a more-or-less normal 
+                distribution of letters, as opposed to using 'Content here, content 
+                here', making it look like readable English. Many desktop publishing
+                 packages and web page editors now use Lorem Ipsum as their default
+                  model text, and a search for 'lorem ipsum' will uncover many web 
+                  sites still in their infancy. Various versions have evolved over 
+                  the years, sometimes by accident, sometimes on purpose</p>
+
+               <div class="tab-titles">
+                  <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                  <p class="tab-links" onclick="opentab('Education')">Education</p>
+                  <p class="tab-links" onclick="opentab('Awards')">Awards</p>
+               </div>
+               <div class="tab-contents active-tab" id="Skills">
+                  <ul>
+                     <li><span>Object Pascal</span><br>3 years experience in school using it to create projects and exams</li>
+                     <li><span>SQL</span><br>2 years experience as it is part of our school curriculam. Have MIMO certification and used it in many proojects</li>
+                     <li><span>Basic Web Development</span><br>Can use HTML,CSS and JS to create a basic website </li>
+                     <li><span>Maths</span>Very strong at maths, constantly achieving over 95% and acheived 100% in grade 11 exams</li>
+                  </ul>
+               </div>
+               <div class="tab-contents" id="Education">
+                  <ul>
+                     <li><span>2010 - Current</span><br>Bishops Diocesian College</li>
+                     <li><span>2021</span><br> Exhange at Culford School in England</li>
+                     <li><span>2024 - 2028 </span><br>Data Science at Stellenbosch University</li>
+                  </ul>
+               </div>
+               <div class="tab-contents" id="Awards">
+                  <ul>
+                     <li><span>2021</span><br>Academic Tie</li>
+                     <li><span>2022</span><br>Selected to be PR member</li>
+                     <li><span>2023</span><br>Maths Prize for top in the grade</li>
+                     <li><span>2023</span><br>Distinction award for leadership</li>
+                     <li><span>2023</span><br>Colours in Leadership,Academics and Cricket</li>
+                  </ul>
+               </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!---------Portfolio---->
+<div id="portfolio">
+  <div class="container">
+   <h1 class="sub-title">My Portfolio</h1>
+   <p>Please message me to see more of my work. <br>The 2 projects below are my main school projects</p>
+     <div class="worklist">
+       <div class="work">
+         <img src="Images/wordle.png">
+          <div class="layer">
+            <a href="https://github.com/Matt-Brodziak/Wordle" target="_blank">Wordle Clone Game</a>
+            <p>This is a wordle coded using Object Pascal in delphi. It lets you have
+               unlimited guesses and keeps track of your score in a database using sql
+               and microsoft access </p>
+          </div>
+       </div>
+      <div class= "work">
+          <img src="Images/pat.jpeg">
+          <div class="layer">
+            <a href="https://github.com/Matt-Brodziak/PAT-Project" target="_blank">PAT Project</a>
+            <p>This is my end of year project in IT. I have to build an app
+               for a wildlife conservation organisation to help them raise funds 
+            for their organisation. It is coded using Object Pascal in delphi and
+             uses SQL and microsoft access to manage the data</p>
+      </div>
+        
+     </div>
+
+  </div>
+  </div>
+  </div>
+
+  <!--------contact--------->
+
+   <div id="contact">
+      <div class="container">
+         <h1 class="sub-title">Contact Me</h1>
+         <p>mattbrodziak@gmail.com</p>
+         <p>+27 645802470</p>
+         <div class="Social-Media">
+            <a href="https://instagram.com/matt1brodziak?igshid=OGQ5ZDc2ODk2ZA==">Instagram</a>
+            <a href="https://twitter.com/MattBrodziak/media">Twitter</a>
+            <a href="www.linkedin.com/in/matt-brodziak">Linkedin</a>
+         </div>
+
+      </div>
+   </div>
+
+<script>
+  
+   var tablinks = document.getElementsByClassName("tab-links");
+   var tabcontents = document.getElementsByClassName("tab-contents");
+
+   function opentab(tabname){
+      for(tablink of tablinks){
+         tablink.classList.remove("active-link")
+      }
+      for(tabcontent of tabcontents){
+         tabcontent.classList.remove("active-tab")
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab")
+   }
+
+</script>
+
+  </body>
+</html>
